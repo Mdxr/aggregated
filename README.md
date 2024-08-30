@@ -15,11 +15,11 @@ step 1 : Goto elasticemail and create an SMTP account "settings->SMTP".
 
 step 2: Verify that account in "settings->domain" section in elasticemail dashboard.
 
-step 3: Change credentials in the main.js file to that of your elasticemail.
+step 3: Change credentials in the config.js file to that of your elasticemail.
 
 #### If you want to remove:
 step 1: remove the "request a university" button from index.html
-step 2: remove the send() function from main.js.
+step 2: remove the send() function from config.js.
 
 
 
