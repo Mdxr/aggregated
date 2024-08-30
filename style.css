@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0 !important;
+    font-family: "Poppins", sans-serif;
+}
+p{
+    margin: 0 !important;
+    font-family: "Poppins", sans-serif;
+}
+header ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+main{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 80dvh;
+    position: relative;
+}
+main .calculator{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+main .calculator.active{
+    display: flex;
+}
+main .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    flex-direction: column;
+    gap: 1rem;
+    /* background: red; */
+    width: 100%;
+}
+main .list .option{
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background-color: #c1c1c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .list .option:hover{
+    background-color: #e0e0e0 !important;
+}
+main .calculator form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: .5rem;
+}
+.req-close-btn, .result-close-btn, .calc-close-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+main .result{
+    position: relative;
+}
+main .calculator form #test-portion{
+    display: none;
+}
+main .calculator form #test-portion.active{
+    display: flex;
+}
+main .calculator form input{
+    border: 1px solid lightgray;
+}
+main .calculator form .portion{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+main .result{
+    display: none;
+    background: white;
+    border: 1px solid lightblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+main .result.active{
+    display: unset !important;
+}
+main .error-container{
+    position: absolute;
+    top: 05%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    display: none;
+}
+main .error-container.active{
+    display: unset;
+}
+main .request-form{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+main .request-form.active{
+    display: unset;
+}
+footer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    text-decoration: none;
+    padding-left: 10px;
+}
+/* reponsiveness */
+@media only screen and (max-width: 750px) {
+    main .list{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main .list{
+        grid-template-columns: 100%;
+    }
+    header{
+        display: flex;
+        padding: 1rem !important;
+        justify-content: center !important  ;
+        align-items: center !important;
+        gap: 1rem;
+    }
+    header ul{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    main .list{
+        padding: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main .calculator{
+        min-width: 300px;
+    }
+    main .request-form{
+        min-width: 300px;
+    }
+}
