@@ -302,10 +302,10 @@ function send() {
     else{
       Email.send({
         Host: "smtp.elasticemail.com",
-        Username: "decodersixnine@gmail.com",
-        Password: "C90A46637637A1D7EE39E1A768B7FD3EF000",
-        To: "decodersixnine@gmail.com",
-        From: "decodersixnine@gmail.com",
+        Username: "[ELASTICEMAIL USERNAME HERE]",
+        Password: "[ELASTICEMAIL PASSWORD HERE]",
+        To: "[ELASTICEMAIL EMAIL HERE]",
+        From: "[ELASTICEMAIL EMAIL HERE]",
         Subject: "University request",
         Body: body,
       }).then(
